@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     // 실무에서는 동시성 문제 때문에 공유되는 변수의 경우 컨커러 맵을 사용해야하지만 여기에서는 해시 맵 사용
