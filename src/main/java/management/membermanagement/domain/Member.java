@@ -1,8 +1,15 @@
 package management.membermanagement.domain;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     public Long getId() {
