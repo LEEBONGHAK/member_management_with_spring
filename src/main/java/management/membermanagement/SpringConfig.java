@@ -1,5 +1,6 @@
 package management.membermanagement;
 
+import management.membermanagement.AOP.TimeTraceAop;
 import management.membermanagement.repository.*;
 import management.membermanagement.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +47,10 @@ public class SpringConfig {
 //        return new JdbcTemplateMemberRepository(dataSource);
 //        return new JPAMemberRepository(em);
 //    }
+
+    // 스프링 빈 등록 2
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }
 }
